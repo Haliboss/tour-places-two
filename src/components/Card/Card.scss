@@ -1,0 +1,50 @@
+@import "../../scss/variables";
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    img {
+        width: 500px;
+        height: 350px;
+        border-radius: 10px;
+        filter: grayscale(0%);
+        &:hover {
+            filter: grayscale(100%);
+        }
+    }
+
+    .kart {
+        background-color: $navbarColor;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: 15px 10px 10px rgb(45, 44, 44);
+        position: relative;
+        overflow: hidden;
+
+        
+        h1 {
+            color: aliceblue;
+            padding: 1rem;
+            font-size: 2rem;
+        }
+        
+        .card-over {
+            color: aliceblue;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(100%);
+            transition: transform .5s ease-in-out;
+            background-color: black;
+            padding: 1rem;
+        }
+        &:hover .card-over {
+            transform: translateY(0%);
+            opacity: .7;
+        }
+    }
+}
+
